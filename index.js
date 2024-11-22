@@ -1,16 +1,5 @@
-const App = require('./App')
+const BlockParser = require('./lib/BlockParser')
 
-
-if (global.blockviewLog) {
-    console.error('Global name conflict: `blockviewLog` already exists')
-    return
+module.exports = {
+    BlockParser,
 }
-global.blockviewLog = function(variable, varName = null) {
-    if (varName) console.log(`// ---- ${varName} ----`)
-    console.log(`;(${
-        JSON.stringify(variable, null, '\t')
-    });\n`)
-}
-
-
-;(new App()).run()
