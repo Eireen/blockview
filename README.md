@@ -21,10 +21,10 @@ cp config.template.js config.js
 # Edit config.js
 
 # Search by block name
-./bin/blockview.js --call-stack-for  block_name  > ../blockview_data/log.js
+./bin/blockview.js --call-stack-for  block_name  > output.js
 
 # Search by $_DO handler name
-./bin/blockview.js --call-stack-for  \$_DO.create_tb_md_subscribers  > ../blockview_data/log.js
+./bin/blockview.js --call-stack-for  \$_DO.create_tb_md_subscribers  > output.js
 ```
 
 
@@ -33,7 +33,7 @@ cp config.template.js config.js
 ### Example of search by block name
 
 ```js
-// ./bin/blockview.js --call-stack-for  tb_md_node_md_popup  > ../blockview_data/log.js
+// ./bin/blockview.js --call-stack-for  tb_md_node_md_popup  > output.js
 ;([
     {
         "handlerName": "$_DRAW.tb_md_node_md_popup",
@@ -66,7 +66,7 @@ cp config.template.js config.js
 ### Example of search by $_DO handler name
 
 ```js
-// ./bin/blockview.js --call-stack-for  \$_DO.create_tb_md_subscribers  > ../blockview_data/log.js
+// ./bin/blockview.js --call-stack-for  \$_DO.create_tb_md_subscribers  > output.js
 ;([
     {
         "handlerName": "$_DO.create_tb_md_subscribers",
